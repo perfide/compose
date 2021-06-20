@@ -3,11 +3,11 @@ ARG PYTHON_VERSION=3.7.10
 
 ARG BUILD_ALPINE_VERSION=3.12
 ARG BUILD_CENTOS_VERSION=7
-ARG BUILD_DEBIAN_VERSION=slim-stretch
+ARG BUILD_DEBIAN_VERSION=slim-buster
 
 ARG RUNTIME_ALPINE_VERSION=3.12
 ARG RUNTIME_CENTOS_VERSION=7
-ARG RUNTIME_DEBIAN_VERSION=stretch-slim
+ARG RUNTIME_DEBIAN_VERSION=buster-slim
 
 ARG DISTRO=alpine
 
@@ -38,7 +38,7 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
     git \
     libc-dev \
     libffi-dev \
-    libgcc-6-dev \
+    libgcc-8-dev \
     libssl-dev \
     make \
     openssl \
